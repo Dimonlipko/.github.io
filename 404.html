@@ -8,11 +8,13 @@
     <title>Electric Engines - electric and hybrid cars service</title>
     <script type="text/javascript">
         // Запам'ятовуємо URL, з якого прийшли
-        const currentUrl = window.location.href;
-        localStorage.setItem('previousUrl', currentUrl);
+        var originalUrl = window.location.pathname;
 
-        // Перенаправляємо на головну сторінку
-        window.location.href = '/';
+        // Перенаправлення на корінь
+        window.location.href = '/'; // Перенаправляємо на головну сторінку
+
+        // Зберігаємо URL, на який намагалися зайти
+        sessionStorage.setItem('originalUrl', originalUrl);
     </script>
 </head>
 <body>
