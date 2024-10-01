@@ -1,23 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Main Page</title>
-  <script type="text/javascript">
-    window.onload = function() {
-      const params = new URLSearchParams(window.location.search);
-      const redirectPath = params.get('redirect');
-      if (redirectPath) {
-        window.location.href = redirectPath; // Перенаправляє на оригінальний URL
-      } else {
-        window.location.href = "/shop"; // Якщо параметра немає, перенаправляє в каталог
-      }
-    };
-  </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>logo.png">
+    <title>Electric Engines - electric and hybrid cars service</title>
 </head>
 <body>
-  <h1>Welcome to the main page</h1>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
 </body>
 </html>
