@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>404 - Page Not Found</title>
-  <script type="text/javascript">
-    var l = window.location;
-    var originalPath = l.pathname + l.search + l.hash;
-    l.replace('/?redirect=' + encodeURIComponent(originalPath));
-  </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>logo.png">
+    <title>Page Not Found - Electric Engines</title>
+    <script type="text/javascript">
+        // Store the original URL
+        var originalURL = window.location.pathname;
+
+        // Redirect to homepage and store the path
+        window.onload = function() {
+            window.location.href = '/';
+            // Save original URL in sessionStorage
+            sessionStorage.setItem('originalPath', originalURL);
+        };
+    </script>
 </head>
 <body>
-  <h1>Page not found</h1>
+    <noscript>
+        <strong>We're sorry but this site doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
 </body>
 </html>
